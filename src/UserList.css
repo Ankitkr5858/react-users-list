@@ -1,0 +1,134 @@
+body {
+    background-color: #F4F7FA;
+}
+
+html{
+    font-size: 12px;
+}
+#root{
+    width: 100%;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+
+input{
+    outline: none;
+    width: 80%;
+    height: 42px;
+    background-color: #F5F5F5;
+    font-size: 1.4rem;
+    padding: 4px;
+    padding-left: 10px;
+    text-align: left;
+    text-overflow: ellipsis;
+    color: #697F8E;
+    border: 1px solid #CFD2D5;
+    border-radius: 12px;
+}
+section {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: transparent;
+}
+
+.table--striped tr:nth-of-type(odd) {
+    background-color: #F9F9F9;
+}
+.table--hover tbody tr:hover {
+    cursor: pointer;
+    background-color: #F5F5F5;
+}
+.table--bordered tr {
+    border-bottom: 2px solid #cfd2d5;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 2px solid #CFD2D5;
+}
+
+td, th {
+    font-size: 1.4rem;
+    padding: .8rem;
+    text-align: left;
+    text-overflow: ellipsis;
+    color: #a4adc2;
+    line-height: 3em;
+}
+
+th {
+    font-weight: 900;
+    color: #A4ADC2;
+}
+
+td {
+    font-weight: 400;
+    color: #697F8E;
+    border-top: 1px solid #CFD2D5;
+}
+
+tbody tr:first-child {
+    border-top: 0;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 320px) and (max-device-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #CFD2D5;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #CFD2D5;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td, td:before, th {
+        line-height: 1.5em;
+    }
+
+    td:before {
+        position: absolute;
+        top: 22%;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 900;
+        color: #A4ADC2;
+    }
+
+    td:before {
+        content: attr(data-label);
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    body {
+        padding: 0;
+        margin: 0;
+        //width: 320px;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body {
+        //width: 495px;
+    }
+}
